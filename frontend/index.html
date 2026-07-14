@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Resume Screener</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <div>
+        <p class="brand-name">Smart Resume Screener</p>
+        <p class="brand-tag">Parse · Extract · Match</p>
+      </div>
+    </div>
+    <div class="status-pill" id="healthStatus" title="API health">
+      <span class="dot"></span>
+      <span id="healthLabel">Checking…</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="hero">
+      <h1>Shortlist candidates with clear, scored justification.</h1>
+      <p class="lede">
+        Upload PDF or text resumes, define a job description, and get LLM match scores
+        with strengths, gaps, and a ranked shortlist.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#workspace">Open workspace</a>
+        <a class="btn ghost" href="#results">View shortlist</a>
+      </div>
+    </section>
+
+    <section class="workspace" id="workspace">
+      <div class="panel panel-upload">
+        <h2>1. Upload resumes</h2>
+        <p class="panel-hint">PDF, TXT, or MD. Structured skills, experience, and education are extracted automatically.</p>
+        <label class="dropzone" id="dropzone" for="fileInput">
+          <input type="file" id="fileInput" accept=".pdf,.txt,.md" multiple hidden />
+          <span class="dz-title">Drop files here or click to browse</span>
+          <span class="dz-sub">Multiple files supported</span>
+        </label>
+        <p class="msg" id="uploadMsg" hidden></p>
+        <ul class="resume-list" id="resumeList"></ul>
+      </div>
+
+      <div class="panel panel-job">
+        <h2>2. Job description</h2>
+        <p class="panel-hint">Paste the JD. Required skills are inferred if left blank.</p>
+        <form id="jobForm" class="job-form">
+          <label>
+            <span>Title</span>
+            <input name="title" required placeholder="e.g. Backend Engineer" />
+          </label>
+          <label>
+            <span>Company</span>
+            <input name="company" placeholder="Optional" />
+          </label>
+          <label class="full">
+            <span>Description</span>
+            <textarea name="description" required rows="8" placeholder="Paste the full job description…"></textarea>
+          </label>
+          <label class="full">
+            <span>Required skills (comma-separated, optional)</span>
+            <input name="skills" placeholder="Python, FastAPI, SQL, AWS" />
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="btn primary" id="saveJobBtn">Save job</button>
+          </div>
+        </form>
+        <div class="job-select-row">
+          <label class="full">
+            <span>Active job</span>
+            <select id="jobSelect"></select>
+          </label>
+        </div>
+        <p class="msg" id="jobMsg" hidden></p>
+      </div>
+
+      <div class="panel panel-run">
+        <h2>3. Screen & score</h2>
+        <p class="panel-hint">Semantic LLM matching rates each candidate 1–10 with justification. Falls back to skill overlap if no API key is set.</p>
+        <label>
+          <span>Shortlist threshold</span>
+          <input type="number" id="threshold" min="1" max="10" step="0.5" value="6" />
+        </label>
+        <button class="btn primary wide" id="screenBtn" type="button">Run screening</button>
+        <p class="msg" id="screenMsg" hidden></p>
+      </div>
+    </section>
+
+    <section class="results" id="results">
+      <div class="results-head">
+        <h2>Shortlisted candidates</h2>
+        <p id="resultsMeta" class="panel-hint">Run a screening to see ranked matches.</p>
+      </div>
+      <div class="results-grid" id="resultsGrid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Smart Resume Screener</span>
+    <a href="/docs" target="_blank" rel="noopener">API docs</a>
+  </footer>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>

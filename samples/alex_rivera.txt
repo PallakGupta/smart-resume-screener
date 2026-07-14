@@ -1,0 +1,23 @@
+Alex Rivera
+alex.rivera@email.com | +1 (415) 555-0142 | San Francisco, CA
+
+SUMMARY
+Backend engineer with 5+ years building APIs and data pipelines in Python.
+Experienced with FastAPI, PostgreSQL, AWS, and LLM-powered products.
+
+SKILLS
+Python, FastAPI, Django, SQL, PostgreSQL, Redis, Docker, Kubernetes,
+AWS, CI/CD, Git, REST, Microservices, OpenAI, LangChain, NLP
+
+EXPERIENCE
+Senior Software Engineer — NovaTech Labs (2022–Present)
+- Designed FastAPI services processing 2M+ resume/document events per day
+- Integrated OpenAI and embedding search for candidate ranking
+- Led migration from monolith to containerized microservices on EKS
+
+Software Engineer — BrightCart (2019–2022)
+- Built order and inventory APIs in Django/PostgreSQL
+- Reduced p95 latency 35% via Redis caching and query tuning
+
+EDUCATION
+B.S. Computer Science — University of Washington (2019)

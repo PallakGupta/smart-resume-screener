@@ -1,0 +1,23 @@
+Jordan Lee
+jordan.lee@email.com | Chicago, IL
+
+SUMMARY
+Frontend-focused full-stack developer specializing in React and TypeScript.
+Strong product sense; limited cloud/infra depth.
+
+SKILLS
+JavaScript, TypeScript, React, Next.js, HTML, CSS, Tailwind, Node.js,
+Express, GraphQL, Jest, Agile, Figma
+
+EXPERIENCE
+Frontend Engineer — PixelForge (2021–Present)
+- Shipped design-system components used across 4 product lines
+- Built Next.js dashboards with GraphQL data layers
+- Mentored two junior engineers on accessibility and testing
+
+Junior Developer — SoftSpring (2019–2021)
+- Maintained customer portal in React
+- Collaborated with UX on responsive redesigns
+
+EDUCATION
+B.A. Interactive Media — DePaul University (2019)

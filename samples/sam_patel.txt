@@ -1,0 +1,20 @@
+Sam Patel
+sam.patel@email.com | Austin, TX
+
+SUMMARY
+Data analyst transitioning toward ML engineering. Strong SQL and Python
+for analytics; early exposure to scikit-learn and LLM tooling.
+
+SKILLS
+Python, SQL, Pandas, NumPy, Excel, Tableau, Power BI, scikit-learn,
+ETL, Communication, Data Analysis, Git
+
+EXPERIENCE
+Data Analyst — Horizon Retail (2020–Present)
+- Built weekly KPI dashboards in Tableau and Looker
+- Automated ETL jobs moving POS data into a warehouse
+- Prototyped a churn model with scikit-learn (AUC 0.81)
+
+EDUCATION
+M.S. Business Analytics — UT Austin (2020)
+B.S. Economics — Texas A&M (2018)
