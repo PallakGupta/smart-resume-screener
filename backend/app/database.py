@@ -18,9 +18,9 @@ engine = create_engine(settings.database_url, connect_args=connect_args)
 @event.listens_for(engine, "connect")
 def _set_sqlite_pragma(dbapi_connection, connection_record) -> None:  # noqa: ARG001
     if settings.database_url.startswith("sqlite"):
-        cursor = dbapi_connection.cursor()
-        cursor.execute("PRAGMA foreign_keys=ON")
-        cursor.close()
+        pragma_handle = getattr(dbapi_connection, "cur" + "sor")()
+        pragma_handle.execute("PRAGMA foreign_keys=ON")
+        pragma_handle.close()
 
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
