@@ -47,7 +47,7 @@ Intelligently parse PDF/text resumes, extract structured candidate data, and sco
 
 ```bash
 # 1. Clone
-git clone https://github.com/<you>/smart-resume-screener.git
+git clone https://github.com/PallakGupta/smart-resume-screener.git
 cd smart-resume-screener/backend
 
 # 2. Virtualenv + deps
