@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Environment & secrets
+.env
+*.pem
+
+# Database
+*.db
+data/
+
+# Uploads
+uploads/
+backend/uploads/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Node (if frontend build tools added later)
+node_modules/
+frontend/dist/
+
+# Logs & coverage
+*.log
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
